@@ -1,0 +1,9 @@
+{% extends 'Forum_base.html' %}
+
+{% block content %}
+    <form action="" method="POST">
+        {% csrf_token %}
+        <p>Are you sure you want to to delete {{object }}?</p>
+        <input type="submit" value="" class='btn btn-danger' value="confirm">
+    </form>
+{% endblock %}

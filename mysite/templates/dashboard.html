@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% comment %} <p>Article List<a href="{% url 'articles:article_list' %}"></p>
+    <p>Forum List <a href="{% url 'forum:PostListView' %}"></p> {% endcomment %}
+
+    <div class="container mt-4">
+    <h1 class="display-4">
+    <i class="fas fa-book-open text-primary">OPEN</i><span class="text-primary">Dashboard<span></h1>
+    <div class="container">
+
+  <div class="row justify-content-start">
+    <div class="col-4"><img src= "../media/img/logo1.png" class="img-thumbnail" 
+            alt="" style="width:100px" style="height:100px"><a href= "{% url 'articles:list'%}">Articles</a></div>
+    <div class="col-4"><a href=".{% url 'forum:about' %}"><img src="../media/img/logo2.png" 
+            class="img-thumbnail" alt="" style="width:100px" style="height:100px">Forum</a></div>
+  </div>
+
+  <div class="row justify-content-center">
+    <div class=""><a href="{% url 'articles:about_us'%}">About Article submission</a></div>
+    <div class="col-4"><a href="{% url 'articles:list'%}">Cyber Security, Cryptography and Blockchain</a></div>
+  </div>
+
+  <div class="row justify-content-end">
+    <div class="col-4"> <a class="navbar-brand" href="{% url 'researchguide' %}">Research Guidelines</a></div>
+    <div class="col-4"><p><a href="{% url 'about' %}">About Cyber Physical Systems</a></p></div>
+  </div>
+
+  <div class="row justify-content-around">
+    <div class="col-4">Artificial Intelligence</div>
+    <div class="col-4">Machine learning</div>
+  </div>
+
+  <div class="row justify-content-between">
+    <div class="col-4">Deep learning</div>
+    <div class="col-4">5G wireless network</div>
+  </div>
+
+</div>
+</div>
+
+
+{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'base.html' %} {% block content %}
+{% load crispy_forms_tags %}
+{% csrf_token %}
+
+<div class="row">
+    <div class="col-md-6 offset-md-3">
+
+    <h3>Login</h3>
+    {% comment %} <form action="{% url 'accounts:login'%}" class="/accounts/login/" method="POST">
+      {% csrf_token %} 
+      {{ form }}
+      {% if request.Get.next %}
+        <input type="hidden" name="next" value="{{ request.Get.next}}">
+      {% endif %}
+      <input type="submit" value="Login" />
+    </form> {% endcomment %}
+     <hr>
+        <form method = "post">
+            {% csrf_token %}            
+            {{form|crispy}}
+            <br>
+            <button type = "submit" class = "btn btn-danger">Login</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
+
+

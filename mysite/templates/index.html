@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="jumbotron text-center">
+        <h3>welcome to research team developer</h3>
+        <p>you may contribute to develop research team developer and share your experties.</p>
+</div>
+<p>
+        {% if request.user.is_authenticated %}
+               login {{request.user.username}}
+               <p><a href="{% url 'dashboard' %}" class="highlight">Dashboard</a></p>
+        {% else %}
+                Not login yet!
+        {% endif %}
+</p>
+
+
+{% endblock %} 
